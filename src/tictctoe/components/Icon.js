@@ -1,11 +1,14 @@
 import React from "react"
-import "../tictactoe.css"
-import  { TiTimes } from "react-icons/fa";
-const Icon = () => {
-    return (
-        <div>
-            <TiTimes/>
-        </div>
-    )
+import { FaTimes,FaPen,FaRegCircle } from "react-icons/fa";
+
+const Icon = ({name}) => {
+   switch(name){
+    case "circle" :
+        return <FaRegCircle/>;
+    case "cross":
+        return <FaTimes/>;
+    default:
+        return <FaPen/>
+   }
 }
- export default Icon; 
+export default Icon;
